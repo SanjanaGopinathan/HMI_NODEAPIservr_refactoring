@@ -1,0 +1,33 @@
+# FastAPI Framework
+fastapi>=0.104.0
+
+# ASGI Server
+uvicorn[standard]>=0.24.0
+
+# Model Context Protocol
+fastmcp
+mcp
+
+# MongoDB Async Driver
+motor==3.6.0
+
+# Pydantic for data validation (auto-managed by fastapi/fastmcp)
+pydantic
+
+# Python dotenv for environment variables
+python-dotenv==1.0.0
+
+# Computer Vision
+opencv-python>=4.8.0
+
+# HTTP Client
+httpx>=0.24.0
+
+# MongoDB sync client for bootstrap
+pymongo>=4.6.0
+
+# OpenAI SDK
+openai>=1.0.0
+
+# Additional async support
+anyio>=3.6.0
