@@ -1,0 +1,78 @@
+{
+  "site": [
+    {
+      "_id": "SITE_01",
+      "tenant_id": "TENANT_01",
+      "name": "Site01",
+      "api_endpoint": {
+        "base_url": "http://106.51.182.207:8015",
+        "health_path": "/health"
+      },
+      "status": "ONLINE"
+    },
+    {
+      "_id": "SITE_02",
+      "tenant_id": "TENANT_01",
+      "name": "Site02",
+      "api_endpoint": {
+        "base_url": "http://localhost:8015",
+        "health_path": "/health"
+      },
+      "status": "ONLINE"
+    }
+  ],
+  "gateway": [
+    {
+      "_id": "GW_SITE_01_0001",
+      "tenant_id": "TENANT_01",
+      "site_id": "SITE_01",
+      "name": "Site01 Gateway 0001",
+      "hmi": {
+        "base_url": "http://localhost:8010",
+        "health_path": "/health"
+      },
+      "status": "ONLINE",
+      "last_seen_at": "2025-12-15T05:45:00Z",
+      "capabilities": [
+        "ALERTING",
+        "VIDEO"
+      ]
+    },
+    {
+      "_id": "GW_SITE_01_0002",
+      "tenant_id": "TENANT_01",
+      "site_id": "SITE_01",
+      "name": "Site01 Gateway 0002",
+      "hmi": {
+        "base_url": "http://localhost:8010",
+        "health_path": "/health"
+      },
+      "status": "ONLINE",
+      "last_seen_at": "2025-12-15T05:45:00Z",
+      "capabilities": [
+        "ALERTING",
+        "VIDEO"
+      ]
+    }
+  ],
+  "model": [
+    {
+      "_id": "MODEL_PPE_SITE_01",
+      "tenant_id": "TENANT_01",
+      "site_id": "SITE_01",
+      "gateway_id": "GW_SITE_01_0001",
+      "name": "PPE-Detector-YOLOv12",
+      "framework_id": "openvino-2024.1",
+      "status": "ACTIVE"
+    },
+    {
+      "_id": "MODEL_INTRUSION_SITE_01",
+      "tenant_id": "TENANT_01",
+      "site_id": "SITE_01",
+      "gateway_id": "GW_SITE_01_0002",
+      "name": "Intrusion-Detector-V1",
+      "framework_id": "openvino-2024.1",
+      "status": "ACTIVE"
+    }
+  ]
+}

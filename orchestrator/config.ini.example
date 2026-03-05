@@ -1,0 +1,16 @@
+# Orchestrator Configuration
+# Copy this file to config.ini in the root directory
+
+[orchestrator]
+# MCP Server connection
+mcp_server_url = http://127.0.0.1:8001/mcp-server/mcp
+
+# Orchestrator API settings
+host = 0.0.0.0
+port = 8020
+
+# Default tenant/site/gateway IDs
+# These will be used when not explicitly provided in API requests
+default_tenant_id = TENANT_01
+default_site_id = SITE_01
+default_gateway_id = GW_SITE_01_0001

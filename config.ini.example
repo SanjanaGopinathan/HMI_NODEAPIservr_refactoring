@@ -1,0 +1,27 @@
+# MCP Server + Orchestrator Configuration
+# These services run together on the same machine
+# Copy this file to config.ini and customize for your environment
+
+[mcp_server]
+# MCP Server settings
+# API server URL - update this to point to your API server machine
+# If API server is on same machine, use http://127.0.0.1:8015
+# If API server is on different machine, use http://<api-server-ip>:8015
+api_base_url = http://127.0.0.1:8015
+
+# MCP server host and port
+host = 127.0.0.1
+port = 8001
+
+# Connection settings
+timeout = 30
+max_retries = 3
+
+[orchestrator]
+# Orchestrator settings
+# MCP server URL - use localhost since they're on the same machine
+mcp_server_url = http://127.0.0.1:8001/mcp-server/mcp
+
+# Orchestrator API host and port
+host = 0.0.0.0
+port = 8020

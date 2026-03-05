@@ -1,0 +1,212 @@
+@baseUrl = http://localhost:8015
+@assetId = 000000000000000000000000
+@gatewayId = 000000000000000000000000
+@modelId = 000000000000000000000000
+@policyId = 000000000000000000000000
+@profileId = 000000000000000000000000
+@personnelId = 000000000000000000000000
+@eventId = 000000000000000000000000
+@actionId = 000000000000000000000000
+
+### Assets - List
+GET {{baseUrl}}/assets
+
+### Assets - Create (fill required fields)
+POST {{baseUrl}}/assets
+Content-Type: application/json
+
+{
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01"
+}
+
+### Assets - Get by ID
+GET {{baseUrl}}/assets/?tenant_id=TENANT_02&site_id=SITE_01
+
+### Assets - Update (fill fields to update)
+PUT {{baseUrl}}/assets/{{assetId}}
+Content-Type: application/json
+
+{
+	"name": "Asset Name"
+}
+
+### Assets - Delete
+DELETE {{baseUrl}}/assets/{{assetId}}
+
+### Gateways - List
+GET {{baseUrl}}/gateway
+
+### Gateways - Create (fill required fields)
+POST {{baseUrl}}/gateway
+Content-Type: application/json
+
+{
+	"_id": "GATEWAY_01",
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01"
+}
+
+### Gateways - Get by ID
+GET {{baseUrl}}/gateway/{{gatewayId}}
+
+### Gateways - Update (fill fields to update)
+PUT {{baseUrl}}/gateway/{{gatewayId}}
+Content-Type: application/json
+
+{
+	"name": "Gateway Name"
+}
+
+### Models - List
+GET {{baseUrl}}/models
+
+### Models - Create (fill required fields)
+POST {{baseUrl}}/models
+Content-Type: application/json
+
+{
+	"_id": "MODEL_01",
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01",
+	"name": "Model Name"
+}
+
+### Models - Get by ID
+GET {{baseUrl}}/models/{{modelId}}
+
+### Models - Delete
+DELETE {{baseUrl}}/models/{{modelId}}
+
+### Policies - List
+GET {{baseUrl}}/policies/?tenant_id=TENANT_01&site_id=SITE_01
+
+### Policies - Create (example payload)
+POST {{baseUrl}}/policies
+Content-Type: application/json
+
+{
+	"_id": "POLICY_01",
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01",
+	"anomaly_type": "PPE"
+}
+
+### Policies - Get by ID
+GET {{baseUrl}}/policies/{{policyId}}
+
+### Policies - Update (fill fields to update)
+PUT {{baseUrl}}/policies/{{policyId}}
+Content-Type: application/json
+
+{
+	"_id": "POLICY_01",
+	"tenant_id": "TENANT_01",
+	"enabled": true
+}
+
+### Policies - Delete
+DELETE {{baseUrl}}/policies/{{policyId}}
+Content-Type: application/json
+
+{
+	"_id": "POLICY_01",
+	"tenant_id": "TENANT_01"
+}
+
+### Profiles - List
+GET {{baseUrl}}/profiles
+
+### Profiles - Create (fill required fields)
+POST {{baseUrl}}/profiles
+Content-Type: application/json
+
+{
+	"_id": "PROFILE_01",
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01",
+	"name": "Profile Name"
+}
+
+### Profiles - Get by ID
+GET {{baseUrl}}/profiles/{{profileId}}
+
+### Profiles - Update (fill fields to update)
+PUT {{baseUrl}}/profiles/{{profileId}}
+Content-Type: application/json
+
+{
+	"name": "Profile Name Updated"
+}
+
+### Profiles - Delete
+DELETE {{baseUrl}}/profiles/{{profileId}}
+
+### Personnel - List
+GET {{baseUrl}}/personnel
+
+### Personnel - Create (fill required fields)
+POST {{baseUrl}}/personnel
+Content-Type: application/json
+
+{
+	"_id": "PERSON_01",
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01",
+	"name": "Person Name"
+}
+
+### Personnel - Get by ID
+GET {{baseUrl}}/personnel/{{personnelId}}
+
+### Events - List
+GET {{baseUrl}}/events
+
+### Events - Create (fill required fields)
+POST {{baseUrl}}/events
+Content-Type: application/json
+
+{
+	"_id": "EVENT_01",
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01"
+}
+
+### Events - Update (fill fields to update)
+PUT {{baseUrl}}/events/{{eventId}}
+Content-Type: application/json
+
+{
+	"status": "UPDATED"
+}
+
+### Events - Delete
+DELETE {{baseUrl}}/events/{{eventId}}
+
+### Actions - List
+GET {{baseUrl}}/actions
+
+### Actions - Create (fill required fields)
+POST {{baseUrl}}/actions
+Content-Type: application/json
+
+{
+	"_id": "ACTION_01",
+	"tenant_id": "TENANT_01",
+	"site_id": "SITE_01"
+}
+
+### Actions - Update (fill fields to update)
+PUT {{baseUrl}}/actions/{{actionId}}
+Content-Type: application/json
+
+{
+	"enabled": true
+}
+
+### Actions - Delete
+DELETE {{baseUrl}}/actions/{{actionId}}
+
+### Health
+GET {{baseUrl}}/health
+

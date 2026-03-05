@@ -1,0 +1,33 @@
+# Unified HMI API Configuration
+# This server includes both CRUD APIs and HMI Mapper functionality
+
+[database]
+# HMI MongoDB connection settings
+# Update mongodb_uri to point to your MongoDB server
+mongodb_uri = mongodb://localhost:27017
+mongodb_db = hmi
+
+[api]
+# FastAPI server settings
+# Set host to 0.0.0.0 to accept connections from other machines
+host = 0.0.0.0
+port = 8015
+title = Unified HMI API
+version = 1.0.0
+# Set reload to true for development (auto-reload on code changes)
+reload = false
+
+[mapping]
+# HMI Mapper settings
+default_camera_type = onvif
+default_sensor_type = CAMSNSR
+subscriber_tel_prefix = +3012345
+imsi_domain = ecrio.com
+default_password = ecrio@123
+
+[edge_ai_api]
+# Edge AI API (IOTA-E Legacy API for subscriber and sensor management)
+# HMI Mapper uses this API instead of direct database access
+base_url = http://106.51.182.207:30019
+user_id = admin
+password = admin@123

@@ -1,0 +1,17 @@
+# FastAPI Framework
+fastapi==0.99.1
+
+# ASGI Server
+uvicorn[standard]==0.22.0
+
+# MongoDB Async Driver
+motor==3.6.0
+
+# Pydantic for data validation (Pydantic v1 for compatibility with older FastAPI)
+pydantic==1.10.26
+
+# Python dotenv for environment variables
+python-dotenv==1.0.0
+
+# Computer Vision
+opencv-python>=4.8.0
